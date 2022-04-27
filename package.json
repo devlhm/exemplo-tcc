@@ -1,0 +1,26 @@
+{
+  "name": "exemplo-tcc",
+  "version": "1.0.0",
+  "description": "Exemplos para o TCC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlhm/exemplo-tcc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlhm/exemplo-tcc/issues"
+  },
+  "homepage": "https://github.com/devlhm/exemplo-tcc#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.29",
+    "typescript": "^4.6.3"
+  }
+}
