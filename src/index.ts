@@ -1,17 +1,13 @@
-const nome : string = "joao";
-const senha : string = "joao123";
+const form : HTMLFormElement = <HTMLFormElement>document.getElementById('login-form');
 
-const botao : HTMLElement = <HTMLElement> document.getElementById("botao");
-botao.addEventListener("click", login);
+form.addEventListener("submit", event => {
+	event.preventDefault()
 
-function login() : void {
+	const request : XMLHttpRequest = new XMLHttpRequest();
+	const formData : FormData = new FormData(form);
 
-    const formNome : string = (<HTMLInputElement> document.getElementById('nome')).value;
-    const formSenha : string = (<HTMLInputElement> document.getElementById('senha')).value;
+	request.addEventListener("load", event => alert((<any> event.target).responseText));
 
-	if (nome == formNome && senha == formSenha) {
-		alert("Login bem-sucedido!");
-	} else {
-		alert("Falha no login!");
-	}
-}
+	request.open("POST", "http://localhost:3000/login");
+	request.send(formData);
+})
